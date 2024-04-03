@@ -21,7 +21,8 @@ function mostrarPesonas(lista) {
     });
 }
 
-mostrarPesonas(listado);
+//mostrarPesonas(listado);
+mostrarPesonasConMap(listado);
 
 /* -------------------------------- Consigna -------------------------------- */
 // Realizar el mismo proceso de renderizar en pantalla pero utilizando la función .map()
@@ -31,6 +32,16 @@ mostrarPesonas(listado);
 
 function mostrarPesonasConMap(lista) {
 
-    lista.map();
+    let estructura = lista.map( function (x) {
+        console.log(x);
+        return `<li><strong>${x.nombre}</stron> (${x.edad} años)</li>`        
+    });
+
+    console.table(estructura);
+    estructura.forEach(item => {
+        nodoUl.innerHTML += item;
+        console.log(nodoUl);
+    })
+    //mostrarPesonas(estructura);
 }
 
