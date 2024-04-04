@@ -32,16 +32,21 @@ mostrarPesonasConMap(listado);
 
 function mostrarPesonasConMap(lista) {
 
-    let estructura = lista.map( function (x) {
-        console.log(x);
-        return `<li><strong>${x.nombre}</stron> (${x.edad} años)</li>`        
+    lista.map( function (x) {
+        nodoUl.innerHTML += `<li><strong>${x.nombre}</stron> (${x.edad} años)</li>`        
     });
 
+
+    // let estructura = lista.map( function (x) {
+    //     console.log(x);
+    //     return `<li><strong>${x.nombre}</stron> (${x.edad} años)</li>`        
+    // });
+
     console.table(estructura);
-    estructura.forEach(item => {
-        nodoUl.innerHTML += item;
-        console.log(nodoUl);
-    })
+    // estructura.forEach(item => {
+    //     nodoUl.innerHTML += item;
+    //     console.log(nodoUl);
+    // })
     //mostrarPesonas(estructura);
 }
 
